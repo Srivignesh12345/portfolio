@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import CountUp from 'react-countup';
 import { useInView as useInViewObs } from 'react-intersection-observer';
-import { FaGithub, FaLinkedin, FaWhatsapp, FaExternalLinkAlt, FaEnvelope, FaCode, FaBrain, FaMicrochip, FaShieldAlt, FaMobile, FaLeaf, FaBolt, FaDownload, FaBars, FaTimes, FaBriefcase } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaWhatsapp, FaExternalLinkAlt, FaEnvelope, FaCode, FaShieldAlt, FaMobile, FaLeaf, FaBolt, FaDownload, FaBars, FaTimes, FaBriefcase } from 'react-icons/fa';
 import './index.css';
 
 /* ── DATA ─────────────────────────────────────── */
@@ -310,7 +310,7 @@ export default function App() {
         <h2 className="section-title">EDUCATION & <span>CERTS</span></h2>
         <div className="edu-grid">
           <motion.div initial={{opacity:0,x:-40}} whileInView={{opacity:1,x:0}} viewport={{once:true}} transition={{duration:0.7}}>
-            <h3 style={{fontFamily:'Orbitron',fontSize:'13px',letterSpacing:'3px',color:'var(--gray)',marginBottom:'32px'}}>// EDUCATION.LOG</h3>
+            <h3 style={{fontFamily:'Orbitron',fontSize:'13px',letterSpacing:'3px',color:'var(--gray)',marginBottom:'32px'}}>{"// EDUCATION.LOG"}</h3>
             <div className="timeline">
               {education.map(e=>(
                 <div className="timeline-item" key={e.year}>
@@ -323,7 +323,7 @@ export default function App() {
             </div>
           </motion.div>
           <motion.div initial={{opacity:0,x:40}} whileInView={{opacity:1,x:0}} viewport={{once:true}} transition={{duration:0.7}}>
-            <h3 style={{fontFamily:'Orbitron',fontSize:'13px',letterSpacing:'3px',color:'var(--gray)',marginBottom:'32px'}}>// CERTIFICATIONS.STACK</h3>
+            <h3 style={{fontFamily:'Orbitron',fontSize:'13px',letterSpacing:'3px',color:'var(--gray)',marginBottom:'32px'}}>{"// CERTIFICATIONS.STACK"}</h3>
             {certs.map(c=>(
               <div className="cert-card" key={c.name}>
                 <span className="cert-icon">📜</span>
