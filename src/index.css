@@ -551,14 +551,96 @@ footer {
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .achieve-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
 @media (max-width: 768px) {
-  section, .navbar, footer { padding-left: 24px; padding-right: 24px; }
-  .hero { padding: 0 24px; }
-  .about-grid, .contact-grid, .edu-grid { grid-template-columns: 1fr; gap: 40px; }
-  .skills-grid { grid-template-columns: 1fr; }
-  .projects-grid, .achieve-grid { grid-template-columns: 1fr; }
-  .hero-stats { gap: 24px; }
-  .internship-card { flex-direction: column; gap: 20px; }
-  .internship-left { flex-direction: row; }
+  /* base */
+  body { cursor: auto; }
+  .cursor, .cursor-follower { display: none; }
+
+  /* navbar */
+  .navbar, .navbar.scrolled { padding: 12px 20px; }
+  .nav-logo { font-size: 16px; letter-spacing: 2px; }
+
+  /* sections */
+  section { padding: 60px 20px; }
+  footer { padding: 32px 20px; }
+  .section-title { font-size: 22px; margin-bottom: 36px; }
+
+  /* hero */
+  .hero {
+    padding: 100px 20px 160px;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .hero-content { max-width: 100%; }
+  .hero-name { font-size: clamp(36px, 10vw, 56px); }
+  .hero-role { font-size: 15px; }
+  .hero-desc { font-size: 14px; margin-bottom: 28px; }
+  .hero-btns { flex-direction: column; gap: 12px; }
+  .btn-primary, .btn-outline, .btn-cv { padding: 12px 24px; font-size: 11px; text-align: center; justify-content: center; width: 100%; box-sizing: border-box; }
+  .hero-img-wrap { display: none; }
+  .hero-stats {
+    position: static;
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+  }
+  .stat-item { text-align: center; }
+  .stat-num { font-size: 22px; }
+  .stat-label { font-size: 10px; }
+  .scroll-indicator { display: none; }
+
+  /* about */
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-text p { font-size: 14px; }
+  .terminal-body { font-size: 11px; padding: 16px; }
+  .terminal-title { display: none; }
+
+  /* skills */
+  .skills-grid { grid-template-columns: 1fr; gap: 16px; }
+  .tech-icons { gap: 10px; margin-top: 36px; }
+  .tech-icon { padding: 8px 14px; font-size: 11px; }
+
+  /* internship */
+  .internship-card { flex-direction: column; gap: 16px; padding: 24px 20px; }
+  .internship-left { flex-direction: row; align-items: center; }
   .internship-line { display: none; }
+  .internship-company { font-size: 13px; }
+  .internship-meta { flex-direction: column; align-items: flex-start; gap: 4px; }
+
+  /* projects */
+  .projects-grid { grid-template-columns: 1fr; gap: 20px; }
+  .project-card { padding: 20px; clip-path: none; }
+  .project-num { font-size: 32px; }
+  .project-title { font-size: 13px; }
+  .project-desc { font-size: 12px; }
+
+  /* education */
+  .edu-grid { grid-template-columns: 1fr; gap: 40px; }
+  .cert-card { padding: 12px 14px; gap: 10px; }
+  .cert-name { font-size: 12px; }
+
+  /* achievements */
+  .achieve-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .achieve-card { padding: 24px 16px; }
+  .achieve-num { font-size: 26px; }
+  .achieve-icon { font-size: 26px; }
+
+  /* contact */
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-info p { font-size: 14px; margin-bottom: 24px; }
+  .contact-link { font-size: 12px; padding: 12px; }
+  .contact-link-icon { font-size: 16px; }
+  .form-submit { font-size: 11px; letter-spacing: 2px; clip-path: none; }
+
+  /* footer */
+  .footer-logo { font-size: 18px; }
+  .footer-text { font-size: 11px; }
+
+  /* bg blobs */
+  .bg-blob-1, .bg-blob-2 { display: none; }
 }
