@@ -188,6 +188,7 @@ export default function App() {
         </motion.div>
 
         <motion.div className="hero-img-wrap" initial={{opacity:0,scale:0.8}} animate={{opacity:1,scale:1}} transition={{duration:1, delay:0.3}}>
+          <div className="hero-img-spinner" />
           <div className="hero-img-ring">
             <img src={require('./profile.jpeg')} alt="Srivignesh" className="hero-img" />
           </div>
